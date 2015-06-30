@@ -1,14 +1,17 @@
 import BaseHTTPServer
 import io
-import matplotlib.dates as mdates
-import matplotlib.pyplot as plt
-from matplotlib.ticker import FormatStrFormatter
 import re
 import SocketServer
 import threading
 import time
 import u6
 from ktypeExample import mVoltsToTempC, tempCToMVolts
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from matplotlib.ticker import FormatStrFormatter
 
 
 # AIN1 screw terminal is physically closest to internal T-sensor.
